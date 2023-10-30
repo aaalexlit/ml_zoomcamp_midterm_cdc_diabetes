@@ -1,2 +1,5 @@
 ucimlrepo
 scikit-learn
+ipykernel
+pandas
+jupyter
