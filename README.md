@@ -3,7 +3,12 @@
 The dataset used in this project is [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) originally coming from Kaggle [Diabetes Health Indicators Dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset) which in turn is a modified and cleaned-up version of the [Behavioral Risk Factor Surveillance System](https://www.kaggle.com/datasets/cdc/behavioral-risk-factor-surveillance-system) dataset.  
 UCI version is used for the ease of access through the use of `ucimlrepo` package.
 
-The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
+The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy. It is a binary classification problem since diabetes and pre-diabetes belong to the same category marked as positive (1), and non-diabetes as negative (0)
+
+# Project Goal
+
+The goal is to better understand the relationship between lifestyle and diabetes in the US.  
+The task itself is a classification task with the target variable being whether a patient has diabetes, is pre-diabetic, or healthy. The stretch goal is the ability to predict if a person has diabetes without testing them for it, but rather from a quick phone chat or even filling out a form online.
 
 # Reproduce the project
 
