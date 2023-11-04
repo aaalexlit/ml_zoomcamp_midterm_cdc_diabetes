@@ -4,3 +4,7 @@ ipykernel
 pandas
 jupyter
 matplotlib
+optuna
+hyperopt
+seaborn
+xgboost
