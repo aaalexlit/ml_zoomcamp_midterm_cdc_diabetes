@@ -149,3 +149,19 @@ To clean up after stopping the container run
 ```shell
 docker compose down
 ```
+
+## Deployment to AWS EBS
+
+```shell
+eb init -i
+eb local run --port 80
+eb create diabetes-prediction-env
+```
+
+Terminate the service
+
+```shell
+eb terminate diabetes-prediction-env
+```
+
+[AWS EBS service deployment - Watch Video](https://www.loom.com/share/9afeab38ed0d470ba1776a3b01ab12be?sid=183778ce-b742-472d-9e8e-0b1ceffeb37c)
