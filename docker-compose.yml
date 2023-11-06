@@ -1,0 +1,7 @@
+services:
+  predict-diabetes:
+    build:
+      context: .
+    platform: linux/amd64
+    ports:
+      - 80:80

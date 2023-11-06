@@ -53,10 +53,10 @@ python train.py
 
 Model is deployed using [FastAPI](https://fastapi.tiangolo.com/)
 
-To run the model locally execute:
+To run the model locally (in the same pipenv environment that it'd run in Docker container) execute:
 
 ```shell
-python predict.py
+pipenv run python predict.py
 ```
 
 That will spin up uvicorn server on port 8000 (make sure it's not occupied)
@@ -96,4 +96,56 @@ curl -X 'POST' \
   "Education": 3,
   "Income": 8
 }'
+```
+
+## Containerized version of the service
+
+To build and spin the service docker container up run:
+
+```shell
+docker compose up --build
+```
+
+
+Then in this instance to test the service you can do it through the UI available on  
+(Note the port difference comparing to the local version!!!)
+
+http://localhost/docs
+
+or by running the following curl:
+
+```shell
+curl -X 'POST' \
+  'http://localhost/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "Age": 7,
+  "AnyHealthcare": 0,
+  "BMI": 40,
+  "CholCheck": 1,
+  "DiffWalk": 0,
+  "Education": 3,
+  "Fruits": 1,
+  "GenHlth": 4,
+  "HeartDiseaseorAttack": 0,
+  "HighBP": 1,
+  "HighChol": 1,
+  "HvyAlcoholConsump": 1,
+  "Income": 8,
+  "MentHlth": 0,
+  "NoDocbcCost": 0,
+  "PhysActivity": 0,
+  "PhysHlth": 0,
+  "Sex": 0,
+  "Smoker": 0,
+  "Stroke": 0,
+  "Veggies": 1
+}'
+```
+
+To clean up after stopping the container run
+
+```shell
+docker compose down
 ```

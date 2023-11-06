@@ -52,8 +52,7 @@ class DiabetesInput(BaseModel):
     Education: int
     Income: int
 
-    class Config:
-        schema_extra = {"example": load_test_input()}
+    model_config = ConfigDict(json_schema_extra={"example": load_test_input()})
 
 
 def load_model():
