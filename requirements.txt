@@ -11,3 +11,4 @@ xgboost==2.0.1
 fastapi==0.104.1
 pipenv==2023.10.24
 uvicorn==0.23.2
+evidently==0.4.8
