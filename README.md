@@ -40,3 +40,60 @@ I usually run jupyter notebooks using Visual Studio Code but if it's not the IDE
 jupyter notebook
 ```
 
+## Training the final model
+
+The final model is trained on all the available data wiht the hyperparameters obtained via fine-tuning in the [notebook.ipynb](notebook.ipynb).  
+To run the final model training execute
+
+```shell
+python train.py
+```
+
+## Model deployment
+
+Model is deployed using [FastAPI](https://fastapi.tiangolo.com/)
+
+To run the model locally execute:
+
+```shell
+python predict.py
+```
+
+That will spin up uvicorn server on port 8000 (make sure it's not occupied)
+
+The api can be tested right from the built-in Swagger UI that can be found on 
+http://127.0.0.1:8000/docs
+
+![Prediction API](prediction_api.png)
+
+or by executing the following curl from the command line:
+
+```shell
+curl -X 'POST' \
+  'http://127.0.0.1:8000/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "HighBP": 1,
+  "HighChol": 1,
+  "CholCheck": 1,
+  "BMI": 40,
+  "Smoker": 0,
+  "Stroke": 0,
+  "HeartDiseaseorAttack": 0,
+  "PhysActivity": 0,
+  "Fruits": 1,
+  "Veggies": 1,
+  "HvyAlcoholConsump": 1,
+  "AnyHealthcare": 0,
+  "NoDocbcCost": 0,
+  "GenHlth": 4,
+  "MentHlth": 0,
+  "PhysHlth": 0,
+  "DiffWalk": 0,
+  "Sex": 0,
+  "Age": 7,
+  "Education": 3,
+  "Income": 8
+}'
+```
