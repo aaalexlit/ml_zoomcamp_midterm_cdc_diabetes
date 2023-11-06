@@ -11,6 +11,6 @@ COPY predict.py ./
 COPY model.bin ./
 COPY test_input.json ./
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "80"]
