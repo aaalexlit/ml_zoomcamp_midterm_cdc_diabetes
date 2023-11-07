@@ -40,6 +40,11 @@ I usually run jupyter notebooks using Visual Studio Code but if it's not the IDE
 jupyter notebook
 ```
 
+> Please note that to see [Evidently](https://www.evidentlyai.com/) Reports that this notebook features, you need to either run it yourself or render it on [nbviewer](https://nbviewer.org/), it doesn't render on GitHub for some reason
+
+Below is a link to the notebook on nbviewer:
+https://nbviewer.org/github/aaalexlit/ml_zoomcamp_midterm_cdc_diabetes/blob/main/notebook.ipynb
+
 ## Training the final model
 
 The final model is trained on all the available data wiht the hyperparameters obtained via fine-tuning in the [notebook.ipynb](notebook.ipynb).  
