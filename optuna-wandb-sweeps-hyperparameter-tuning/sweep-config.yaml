@@ -1,0 +1,11 @@
+job: aaalex-lit/diabetes-prediction/xgb-classifier-diabetes:latest
+metric:
+  goal: maximize
+  name: validation_0-custom_recall_score
+run_cap: 4
+scheduler:
+  job: aaalex-lit/diabetes-prediction/optuna-scheduler:latest
+  num_workers: 1
+  settings:
+    optuna_source: diabetes-prediction/optuna-config-diabetes-prediction:latest
+    optuna_source_filename: optuna_diabetes_prediction.py
