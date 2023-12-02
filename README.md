@@ -169,4 +169,9 @@ Terminate the service
 eb terminate diabetes-prediction-env
 ```
 
-[AWS EBS service deployment - Watch Video](https://www.loom.com/share/9afeab38ed0d470ba1776a3b01ab12be?sid=183778ce-b742-472d-9e8e-0b1ceffeb37c)
+### AWS EBS service deployment video
+<div>
+    <a href="https://www.loom.com/share/9afeab38ed0d470ba1776a3b01ab12be">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/9afeab38ed0d470ba1776a3b01ab12be-1699306123987-with-play.gif">
+    </a>
+</div>
