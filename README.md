@@ -1,27 +1,27 @@
 # Dataset description and attributions
 
 The dataset used in this project is [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) originally coming from Kaggle [Diabetes Health Indicators Dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset) which in turn is a modified and cleaned-up version of the [Behavioral Risk Factor Surveillance System](https://www.kaggle.com/datasets/cdc/behavioral-risk-factor-surveillance-system) dataset.  
-UCI version is used for the ease of access through the use of `ucimlrepo` package.
+UCI version is used for ease of access through the use of `ucimlrepo` package.
 
 The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy. It is a binary classification problem since diabetes and pre-diabetes belong to the same category marked as positive (1), and non-diabetes as negative (0)
 
 # Project Goal
 
-The goal is to better understand the relationship between lifestyle and diabetes in the US.  
+The goal is to understand better the relationship between lifestyle and diabetes in the US.  
 The task itself is a classification task with the target variable being whether a patient has diabetes, is pre-diabetic, or healthy. The stretch goal is the ability to predict if a person has diabetes without testing them for it, but rather from a quick phone chat or even filling out a form online.
 
 # Reproduce the project
 
 ## Environment setup
 
-I prefer to use conda because it comes with a python interpreter of the specified version whereas with the other options like pipenv, poetry etc you need a base interpreter of a required version.
-If you don't want to use conda, you can as well just skip the conda environment setup and use the provided Pipfile.* to reproduce the environment or just create virtual environment of your choice (eg python's built-in `venv`), and install the dependencies using the provided [requirements.txt](requirements.txt). In the latter case you need to keep in mind that the base interpreter's python version must be 3.10 and that 100% reproducibility is likely to be achieve but is not guaranteed.
+I prefer to use conda because it comes with a Python interpreter of the specified version whereas with the other options like pipenv, poetry etc you need a base interpreter of a required version.
+If you don't want to use conda, you can as well skip the conda environment setup and use the provided Pipfile.* to reproduce the environment or create a virtual environment of your choice (eg python's built-in `venv`), and install the dependencies using the provided [requirements.txt](requirements.txt). In the latter case you need to remember that the base interpreter's python version must be 3.10 and that 100% reproducibility is likely to be achieved but is not guaranteed.
 
 Below are instructions for conda
 
 1. Clone this repo
 
-1. Create a clean Python 3.10 based environment and activate it
+1. Create a clean Python 3.10-based environment and activate it
     ```shell
     conda create -n ml-zoomcamp-midterm-alex python=3.10
     conda activate ml-zoomcamp-midterm-alex
@@ -47,16 +47,16 @@ https://nbviewer.org/github/aaalexlit/ml_zoomcamp_midterm_cdc_diabetes/blob/main
 
 ## Training the final model
 
-The final model is trained on all the available data wiht the hyperparameters obtained via fine-tuning in the [notebook.ipynb](notebook.ipynb).  
+The final model is trained on all the available data with the hyperparameters obtained via fine-tuning in the [notebook.ipynb](notebook.ipynb).  
 To run the final model training execute
 
 ```shell
 python train.py
 ```
 
-## Model deployment
+## Model Deployment
 
-Model is deployed using [FastAPI](https://fastapi.tiangolo.com/)
+The model is deployed using [FastAPI](https://fastapi.tiangolo.com/)
 
 To run the model locally (in the same pipenv environment that it'd run in Docker container) execute:
 
@@ -113,7 +113,7 @@ docker compose up --build
 
 
 Then in this instance to test the service you can do it through the UI available on  
-(Note the port difference comparing to the local version!!!)
+(Note the port difference compared to the local version!!!)
 
 http://localhost/docs
 
